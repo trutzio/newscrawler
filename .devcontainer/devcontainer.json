@@ -1,0 +1,19 @@
+{
+    "name": "newscrawler-devcontainer",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/python:1.8.0": {
+            "version": "3.12"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": ["ms-toolsai.jupyter"]
+        }   
+    }  
+}
